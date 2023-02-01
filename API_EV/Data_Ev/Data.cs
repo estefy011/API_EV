@@ -24,5 +24,36 @@ namespace API_EV.Data_Ev
             conn = new SQLiteConnection(_dbPath);
             conn.CreateTable<Product>();
         }
+        
+
+        public int AddNewProduct(Product productsEV)
+        {
+            Init();
+            // int result = conn.Insert(burger);
+            //  return result;
+            if (productsEV.id != 0)
+            {
+                conn.Update(productsEV);
+                return productsEV.id;
+            }
+            else
+            {
+                return conn.Insert(productsEV);
+            }
+        }
+
+        public List<Product> GetAllProducts()
+        {
+            Init();
+            List<Product> productsEV = conn.Table<Product>().ToList();
+            return productsEV;
+        }
+
+        public int DeleteProduct(Product itemEV)
+        {
+            Init();
+
+            return conn.Delete(itemEV);
+        }
     }
     }
