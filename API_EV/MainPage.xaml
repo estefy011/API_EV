@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="API_EV.MainPage">
 
-    <StackLayout>
+    <VerticalStackLayout>
+      
 
-        <Label Text="Lista de comentarios" FontSize="Title" Padding="30,10,30,10"/>
+                <Label Text="Lista de comentarios" FontSize="Title" Padding="30,10,30,10"/>
         <SearchBar x:Name="Buscador" 
                    Placeholder="Ingrese el id" 
                    TextColor="Black"/>
@@ -21,7 +22,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
+   
+    </VerticalStackLayout>
 
 
 </ContentPage>

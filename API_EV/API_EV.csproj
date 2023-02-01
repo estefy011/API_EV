@@ -56,7 +56,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Controllers\" />
-	  <Folder Include="Views_EV\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="VistaProduct.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
