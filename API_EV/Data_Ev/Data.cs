@@ -9,11 +9,11 @@ using API_EV.Models_EV;
 
 namespace API_EV.Data_Ev
 {
-    public class EV_BurgerDatabase
+    public class Data_EV
     {
         string _dbPath;
         private SQLiteConnection conn;
-        public EV_BurgerDatabase(string DatabasePath)
+        public Data_EV(string DatabasePath)
         {
             _dbPath = DatabasePath;
         }
@@ -40,6 +40,12 @@ namespace API_EV.Data_Ev
             {
                 return conn.Insert(productsEV);
             }
+        }
+
+        public int UpdateProduct(Product productEV)
+        {
+            Init();
+            return conn.Update(productEV);
         }
 
         public List<Product> GetAllProducts()

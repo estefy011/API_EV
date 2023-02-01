@@ -1,11 +1,19 @@
-﻿namespace API_EV;
+﻿using API_EV.Data_Ev;
+
+namespace API_EV;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+   
+        public static Data_EV ProductRepo { get; private set; }
 
-		MainPage = new AppShell();
-	}
+        public App(Data_EV repoEV)
+        {
+            InitializeComponent();
+
+            MainPage = new AppShell();
+
+            ProductRepo = repoEV;
+        }
+    
 }
