@@ -17,7 +17,7 @@
         <ListView x:Name="ListaDemo">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding result[0].brand}" />
+                    <TextCell Text="{Binding id}" Detail="{Binding brand}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

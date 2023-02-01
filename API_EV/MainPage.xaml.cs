@@ -19,9 +19,9 @@ public partial class MainPage : ContentPage
         string cadena = Buscador.Text;
         var request = new HttpRequestMessage();
         //request.RequestUri = new Uri("https://dummyjson.com/products/");
-        request.RequestUri = new Uri("https://dummyjson.com/products/"+cadena);
-        string texto = "https://dummyjson.com/products/" + cadena;
-        label.Text = texto;
+        request.RequestUri = new Uri("https://dummyjson.com/products?brand="+cadena);
+        //string texto = "https://dummyjson.com/products/" + cadena;
+        //label.Text = texto;
         request.Method = HttpMethod.Get;
         request.Headers.Add("Accept", "application/json");
 
