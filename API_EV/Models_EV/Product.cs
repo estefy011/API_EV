@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
 
 namespace API_EV.Models_EV
 {
+
+    [Table("Product")]
+
     public class Product
     {
+        [PrimaryKey, AutoIncrement]
         public int id { get; set; }
         public string title { get; set; }
         public string description { get; set; }
